@@ -1,5 +1,8 @@
 const key = 'UiGTGmssIlmchGjr5c6zbit4PS714Cd1'
 
+
+ // Get city information 
+
 const getCity = async (location) =>{
 
     const baseEndpoint = "http://dataservice.accuweather.com/locations/v1/cities/search"
@@ -11,6 +14,8 @@ const getCity = async (location) =>{
     return data[0]
 
 }
+
+// Get curent weather conditions for city and log to console
 
 const getCurrentConditions = async(locationkey) =>{
     const endpoint = `http://dataservice.accuweather.com/currentconditions/v1/${locationkey}?apikey=${key}`
