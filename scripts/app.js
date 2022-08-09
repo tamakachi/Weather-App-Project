@@ -1,6 +1,9 @@
 const cityInput = document.querySelector(".change-location")
 const details = document.querySelector(".details")
 const card = document.querySelector(".card")
+const time = document.querySelector(".time")
+const icon = document.querySelector("#icon")
+
 const updateCity = async(city) =>{
 
     const cityData = await getCity(city)
@@ -35,6 +38,16 @@ const updateUI = (data) =>{
         <span>${data.weatherData[0].Temperature.Metric.Value}&deg;</span>
     </div>
     `
+
+
+    if (data.weatherData[0].IsDayTime){
+        time.setAttribute("src","img/day.svg")
+    } else {
+        time.setAttribute("src","img/night.svg")
+    }
+
+    icon.setAttribute("src",`img/icons/${data.weatherData[0].WeatherIcon}.svg`)
+
 
     if (card.classList.contains("d-none"))
     {card.classList.remove("d-none")}
