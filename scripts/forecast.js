@@ -28,8 +28,8 @@ const getCurrentConditions = async(locationkey) =>{
 // Fires function to get city location key and passes the returned key into getcurrentweatherconditions which returns the data
 // Then logs it to the console
 
-getCity("Durban")
-    .then(data=>{
-        return getCurrentConditions(data.Key)
-    }).then (data=>{console.log(data)})
-    .catch(error=>console.log(error))
+// getCity("Durban")
+//     .then(data=>{
+//         return getCurrentConditions(data.Key)
+//     }).then (data=>{console.log(data)})
+//     .catch(error=>console.log(error))
