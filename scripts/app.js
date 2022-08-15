@@ -32,7 +32,7 @@ cityInput.addEventListener("submit", e =>{
     
 })
 
-    // Automatically load the page with last city weather information if city in storage exists
+    // local storage , automatically load the page with last city weather information if city in storage exists
     if (localStorage.getItem("city")){
         updateCity(localStorage.getItem("city"))
         .then(data=>updateUI(data))
