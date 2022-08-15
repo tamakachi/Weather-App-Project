@@ -25,8 +25,20 @@ cityInput.addEventListener("submit", e =>{
     updateCity(city)
         .then(data=>updateUI(data))
         .catch(err=>console.log(err))
+
+    // Local storage
+    localStorage.setItem("city",city)
+    
     
 })
+
+    // Automatically load the page with last city weather information if city in storage exists
+    if (localStorage.getItem("city")){
+        updateCity(localStorage.getItem("city"))
+        .then(data=>updateUI(data))
+        .catch(err=>console.log(err))
+    }
+
 
 const updateUI = (data) =>{
 
