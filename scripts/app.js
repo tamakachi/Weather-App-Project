@@ -1,8 +1,11 @@
+// References for DOM manipulation
+
 const cityInput = document.querySelector(".change-location")
 const details = document.querySelector(".details")
 const card = document.querySelector(".card")
 const time = document.querySelector(".time")
 const icon = document.querySelector("#icon")
+
 
 const updateCity = async(city) =>{
 
